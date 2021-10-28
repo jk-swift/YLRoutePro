@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522D22A4272A811F005C8A19 /* ASRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D22A3272A811F005C8A19 /* ASRoute.swift */; };
 		F5C7111C24A2797D00E3EE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7111B24A2797D00E3EE53 /* AppDelegate.swift */; };
 		F5C7111E24A2797D00E3EE53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7111D24A2797D00E3EE53 /* SceneDelegate.swift */; };
 		F5C7112024A2797D00E3EE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7111F24A2797D00E3EE53 /* ViewController.swift */; };
@@ -14,10 +15,10 @@
 		F5C7112524A2797F00E3EE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C7112424A2797F00E3EE53 /* Assets.xcassets */; };
 		F5C7112824A2797F00E3EE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C7112624A2797F00E3EE53 /* LaunchScreen.storyboard */; };
 		F5C7113024A279B900E3EE53 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7112F24A279B900E3EE53 /* SecondVC.swift */; };
-		F5C7113324A279E800E3EE53 /* YLRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7113224A279E800E3EE53 /* YLRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522D22A3272A811F005C8A19 /* ASRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRoute.swift; sourceTree = "<group>"; };
 		F5C7111824A2797D00E3EE53 /* YLRoutePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLRoutePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C7111B24A2797D00E3EE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5C7111D24A2797D00E3EE53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		F5C7112724A2797F00E3EE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5C7112924A2797F00E3EE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C7112F24A279B900E3EE53 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
-		F5C7113224A279E800E3EE53 /* YLRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 		F5C7113124A279E800E3EE53 /* Route */ = {
 			isa = PBXGroup;
 			children = (
-				F5C7113224A279E800E3EE53 /* YLRoute.swift */,
+				522D22A3272A811F005C8A19 /* ASRoute.swift */,
 			);
 			path = Route;
 			sourceTree = SOURCE_ROOT;
@@ -153,8 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C7112024A2797D00E3EE53 /* ViewController.swift in Sources */,
+				522D22A4272A811F005C8A19 /* ASRoute.swift in Sources */,
 				F5C7111C24A2797D00E3EE53 /* AppDelegate.swift in Sources */,
-				F5C7113324A279E800E3EE53 /* YLRoute.swift in Sources */,
 				F5C7113024A279B900E3EE53 /* SecondVC.swift in Sources */,
 				F5C7111E24A2797D00E3EE53 /* SceneDelegate.swift in Sources */,
 			);

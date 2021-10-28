@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SecondVC: UIViewController, YLRouteEnable {
-    var params: [String : String]?
+class SecondVC: UIViewController, ASRouteAble {
+    var params: [String : Any]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,17 @@ class SecondVC: UIViewController, YLRouteEnable {
         title = "Second"
         view.backgroundColor = .white
         
+//        print(params ?? "nil")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         print(params ?? "nil")
+    }
+    
+    deinit {
+        print("\(self) deinit...")
     }
     
 
