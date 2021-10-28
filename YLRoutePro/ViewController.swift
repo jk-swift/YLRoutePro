@@ -39,19 +39,40 @@ class ViewController: UIViewController {
         view.addSubview(btn0)
         view.addSubview(btn1)
         
-        YLRoute.shared.map(route: "/second/:page", toControllerClass: SecondVC.self)
-        YLRoute.shared.map(route: "/block/:id") { (param: [String : String]) in
-            print(param)
+        ASRoute.shared.map(route: "/block/:id", toControllerClass: SecondVC.self)
+        // 性能测试: 当注册vc增加到100000以上,内存占用上升
+//        for i in 1...100000 {
+//            ASRoute.shared.map(route: "/block\(i)/:id", toControllerClass: SecondVC.self)
+//        }
+        
+        ASRoute.shared.map(route: "/block/:id") { (param: [String : Any]?) in
+            print(param ?? "nil")
+            let vc = SecondVC()
+            vc.view.backgroundColor = .red
+            self.navigationController?.pushViewController(vc, animated: true)
         }
+        // 性能测试: 当注册vc增加到100000以上,内存占用不明显
+//        for i in 1...100000 {
+//            ASRoute.shared.map(route: "/block\(i)/:id") { (param: [String : Any]?) in
+//                print(param ?? "nil")
+//                let vc = SecondVC()
+//                vc.view.backgroundColor = .red
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }
+//        }
     }
 
     @objc func tapped(btn: UIButton) {
-        if btn == btn0, let vc = YLRoute.shared.matchController("/second/10?site=baidu&num=10") {
-            navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        if btn == btn1 {
-            YLRoute.shared.callBlock(route: "/block/11?size=baidu&num=100")
+        switch btn {
+        case btn0:
+            if let vc = ASRoute.shared.matchController("/block/10?site=baidu&num=10&name=李雷") {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        case btn1:
+            ASRoute.shared.callBlock("/block/11?size=baidu&num=100&name=李雷")
+            
+        default:
+            break
         }
     }
 
